@@ -11,7 +11,9 @@ publish_to: none
 
 dependencies:
   key_value_store:
-    path: ../key_value_store
+    git:
+      url: git://github.com/ibedek/multiplatform_key_value_store.git
+      path: key_value_store
 
 dev_dependencies:
   build_runner: ^1.11.5
