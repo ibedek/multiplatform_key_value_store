@@ -5,13 +5,13 @@ import 'dart:async';
 /// Meant to be imported in your core business logic project.
 /// Doesn't do anything by itself.
 abstract class KeyValueStore {
-  Set<String> getKeys();
+  Set<String>? getKeys();
 
-  bool getBool(String key);
-  int getInt(String key);
-  double getDouble(String key);
-  String getString(String key);
-  List<String> getStringList(String key);
+  bool? getBool(String key);
+  int? getInt(String key);
+  double? getDouble(String key);
+  String? getString(String key);
+  List<String>? getStringList(String key);
 
   Future<bool> setBool(String key, bool value);
   Future<bool> setInt(String key, int value);

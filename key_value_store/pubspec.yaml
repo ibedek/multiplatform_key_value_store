@@ -1,8 +1,8 @@
 name: key_value_store
 description: A key-value store interface for the core module of multiplatform Dart projects.
-version: 1.0.0
+version: 1.0.0-nullsafety
 homepage: https://github.com/roughike/multiplatform_key_value_store
 author: Iiro Krankka <iiro.krankka@gmail.com>
 
 environment:
-  sdk: '>=2.0.0 <3.0.0'
+  sdk: '>=2.12.0 <3.0.0'

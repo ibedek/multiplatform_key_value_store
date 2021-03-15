@@ -19,23 +19,23 @@ class WebKeyValueStore implements KeyValueStore {
   final Storage _storage;
 
   @override
-  Set<String> getKeys() => _storage.keys;
+  Set<String>? getKeys() => _storage.keys.toSet();
 
   @override
   bool getBool(String key) => _storage[key] == 'true';
 
   @override
-  int getInt(String key) => int.parse(_storage[key]);
+  int getInt(String key) => int.parse(_storage[key]!);
 
   @override
-  double getDouble(String key) => double.parse(_storage[key]);
+  double getDouble(String key) => double.parse(_storage[key]!);
 
   @override
-  String getString(String key) => _storage[key];
+  String? getString(String key) => _storage[key];
 
   @override
   List<String> getStringList(String key) =>
-      (json.decode(_storage[key]) as List).cast<String>();
+      (json.decode(_storage[key]!) as List).cast<String>();
 
   @override
   Future<bool> setBool(String key, bool value) => _setValue(key, value);
@@ -50,7 +50,8 @@ class WebKeyValueStore implements KeyValueStore {
   Future<bool> setString(String key, String value) => _setValue(key, value);
 
   @override
-  Future<bool> setStringList(String key, List<String> values) => _setValue(key, values);
+  Future<bool> setStringList(String key, List<String> values) =>
+      _setValue(key, values);
 
   @override
   Future<bool> remove(String key) {

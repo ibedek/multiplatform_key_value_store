@@ -1,23 +1,25 @@
 name: key_value_store_flutter
 description: A multiplatform key-value store implementation for Flutter.
-version: 1.0.0
+version: 1.0.0-nullsafety
 author: Iiro Krankka <iiro.krankka@gmail.com>
 homepage: https://github.com/roughike/multiplatform_key_value_store
 
 environment:
-  sdk: ">=2.0.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
+
+publish_to: none
 
 dependencies:
   flutter:
     sdk: flutter
-  shared_preferences: ^0.4.3
+  shared_preferences: ^2.0.3
   key_value_store:
     path: ../key_value_store
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  mockito: ^3.0.0
+  mockito: ^5.0.0
 
 flutter:
   plugin:
