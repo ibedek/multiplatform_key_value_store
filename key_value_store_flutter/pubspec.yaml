@@ -14,7 +14,9 @@ dependencies:
     sdk: flutter
   shared_preferences: ^2.0.3
   key_value_store:
-    path: ../key_value_store
+    git:
+      url: git://github.com/ibedek/multiplatform_key_value_store.git
+      path: key_value_store
 
 dev_dependencies:
   flutter_test:
